@@ -1,0 +1,58 @@
+version: '3.5'
+services:
+  proxy:
+    image: traefik:1.7.4-alpine
+    command:
+      - "--api"
+      - "--docker"
+      - "--docker.watch"
+    labels:
+      - "traefik.frontend.rule=Host:monitor.local"
+      - "traefik.port=8080"
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+
+  ventas:
+    build: ./ventas
+    image: cafeteria/ventas
+    labels:
+      - "traefik.backend=ventas"
+      - "traefik.frontend.rule=Host:ventas.local"
+
+  reportes:
+    build: ./reportes
+    image: cafeteria/reportes
+    labels:
+      - "traefik.backend=reportes"
+      - "traefik.frontend.rule=Host:reportes.local"
+
+  users:
+    build: ./users
+    image: cafeteria/users
+    labels:
+      - "traefik.backend=users"
+      - "traefik.frontend.rule=Host:users.local"
+  users:
+    build: ./productos
+    image: cafeteria/productos
+    labels:
+      - "traefik.backend=productos"
+      - "traefik.frontend.rule=Host:productos.local"
+  db:
+    image: mongo:4.0
+    ports:
+      - target: 27017
+        published: 27017
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: ./backup
+        target: /backup
