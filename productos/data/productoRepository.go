@@ -1,7 +1,6 @@
 package data
 
 import (
-	"time"
 
 	"github.com/willyrotaract/cafeteria/tree/master/productos/models"
 	"gopkg.in/mgo.v2"
@@ -13,7 +12,7 @@ type ProductoRepository struct {
 }
 
 func (r *ProductoRepository) GetAll() []models.Producto {
-	var Productos []models.Producto
+	var productos []models.Producto
 	iter := r.C.Find(nil).Iter()
 	result := models.Producto{}
 	for iter.Next(&result) {
@@ -25,7 +24,6 @@ func (r *ProductoRepository) GetAll() []models.Producto {
 func (r *ProductoRepository) Create(producto *models.Producto) error {
 	obj_id := bson.NewObjectId()
 	producto.Id = obj_id
-	producto.CreatedOn = time.Now()
 	err := r.C.Insert(&producto)
 	return err
 }
