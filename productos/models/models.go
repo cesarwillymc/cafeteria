@@ -13,6 +13,5 @@ type (
 		Marca  string        `json:"Marca"`
 		Precio    float32       `json:"Precio"`
 		Tipo      string	`json:"Tipo"`
-		//Tipo time.Time     `json:"createdon,omitempty"`
 	}
 )
