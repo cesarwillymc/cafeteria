@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"github.com/willyrotaract/cafeteria/ventas/common"
-	"github.com/willyrotaract/cafeteria/ventas/routers"
+	"github.com/willyrotaract/cafeteria/tree/master/ventas/common"
+	"github.com/willyrotaract/cafeteria/tree/master/ventas/routers"
 )
 
 // Entry point for the program

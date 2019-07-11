@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/willyrotaract/cafeteria/users/common"
-	"github.com/willyrotaract/cafeteria/users/data"
+	"github.com/willyrotaract/cafeteria/tree/master/users/common"
+	"github.com/willyrotaract/cafeteria/tree/master/users/data"
 	"gopkg.in/mgo.v2"
 )
 

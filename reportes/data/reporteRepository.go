@@ -1,7 +1,7 @@
 package data
 
 import (
-	"github.com/willyrotaract/cafeteria/reportes/models"
+	"github.com/willyrotaract/cafeteria/tree/master/reportes/models"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

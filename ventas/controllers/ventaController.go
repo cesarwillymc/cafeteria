@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/willyrotaract/cafeteria/ventas/common"
-	"github.com/willyrotaract/cafeteria/ventas/data"
+	"github.com/willyrotaract/cafeteria/tree/master/ventas/common"
+	"github.com/willyrotaract/cafeteria/tree/master/ventas/data"
 	"gopkg.in/mgo.v2"
 )
 
@@ -38,7 +38,7 @@ func CreateVenta(w http.ResponseWriter, r *http.Request) {
 	// Decode the incoming ShowTime json
 	err := json.NewDecoder(r.Body).Decode(&dataResource)
 	if err != nil {
-		common.DisplayAppError(w, err, "Invalid ShowTime data", 500)
+		common.DisplayAppError(w, err, "Invalid venta data", 500)
 		return
 	}
 	venta := &dataResource.Data

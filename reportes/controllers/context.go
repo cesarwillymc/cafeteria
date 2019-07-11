@@ -3,7 +3,7 @@ package controllers
 import (
 	"gopkg.in/mgo.v2"
 
-	"github.com/willyrotaract/cafeteria/reportes/common"
+	"github.com/willyrotaract/cafeteria/tree/master/reportes/common"
 )
 
 // Struct used for maintaining HTTP Request Context

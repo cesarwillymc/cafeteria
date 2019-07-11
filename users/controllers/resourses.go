@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/willyrotaract/cafeteria/users/models"
+	"github.com/willyrotaract/cafeteria/tree/master/users/models"
 )
 
 type (

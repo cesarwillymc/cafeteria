@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/willyrotaract/cafeteria/reportes/common"
-	"github.com/willyrotaract/cafeteria/reportes/data"
+	"github.com/willyrotaract/cafeteria/tree/master/reportes/common"
+	"github.com/willyrotaract/cafeteria/tree/master/reportes/data"
 )
 
 // Handler for HTTP Post - "/bookins"

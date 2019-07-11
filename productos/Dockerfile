@@ -6,13 +6,13 @@ RUN go get gopkg.in/mgo.v2
 RUN go get github.com/gorilla/mux
 
 # copy the local package files to the container workspace
-ADD . /go/src/github.com/willyrotaract/cafeteria/productos
+ADD . /go/src/github.com/willyrotaract/cafeteria/tree/master/productos
 
 # Setting up working directory
-WORKDIR /go/src/github.com/willyrotaract/cafeteria/productos
+WORKDIR /go/src/github.com/willyrotaract/cafeteria/tree/master/productos
 
 # build binary
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o movies .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o productos .
 
 
 # alpine image
@@ -20,7 +20,7 @@ FROM alpine:3.9.2 as prod
 # Setting up working directory
 WORKDIR /root/
 # copy movies binary
-COPY --from=dev /go/src/github.com/willyrotaract/cafeteria/productos .
+COPY --from=dev /go/src/github.com/willyrotaract/cafeteria/tree/master/productos .
 # Service listens on port 8080.
 EXPOSE 8080
 # Run the movies microservice when the container starts.

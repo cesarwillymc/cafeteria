@@ -3,7 +3,7 @@ package data
 import (
 	"time"
 
-	"github.com/willyrotaract/cafeteria/ventas/models"
+	"github.com/willyrotaract/cafeteria/tree/master/ventas/models"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

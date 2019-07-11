@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/willyrotaract/cafeteria/productos/common"
-	"github.com/willyrotaract/cafeteria/productos/routers"
+	"github.com/willyrotaract/cafeteria/tree/master/productos/common"
+	"github.com/willyrotaract/cafeteria/tree/master/productos/routers"
 )
 
 // Entry point for the program
