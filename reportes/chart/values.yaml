@@ -3,9 +3,8 @@ project: cafeteria
 component: reportes
 
 image:
-  repository: willyrotaract/cafeteria-reportes
-  tag: 1.1.1
-  pullPolicy: IfNotPresent
+  repository: willyrotaract2/reportes
+  tag: 1.0
 ## replicas number for each component
 replicas: 1
 

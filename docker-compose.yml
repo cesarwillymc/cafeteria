@@ -18,7 +18,6 @@ services:
         published: 80
         protocol: tcp
         mode: host
-
   ventas:
     build: ./ventas
     image: cafeteria/ventas
@@ -39,7 +38,7 @@ services:
     labels:
       - "traefik.backend=users"
       - "traefik.frontend.rule=Host:users.local"
-  users:
+  productos:
     build: ./productos
     image: cafeteria/productos
     labels:

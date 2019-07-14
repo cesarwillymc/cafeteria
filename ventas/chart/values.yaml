@@ -3,9 +3,8 @@ project: cafeteria
 component: ventas
 
 image:
-  repository: willyrotaract/cafeteria-ventas
-  tag: 1.1.1
-  pullPolicy: IfNotPresent
+  repository: willyrotaract2/ventas
+  tag: 1.0
 ## replicas number for each component
 replicas: 1
 

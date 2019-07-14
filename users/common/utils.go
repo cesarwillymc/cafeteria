@@ -61,7 +61,7 @@ func initConfig() {
 
 // Load configuration from environment
 func loadConfigFromEnvironment(appConfig *configuration)  {
-	server, ok := os.LookupEnv("CINEMA_USERS")
+	server, ok := os.LookupEnv("CAFETERIA_USERS")
 	if ok {
 		appConfig.Server = server	
 		log.Printf("[INFO]: Server information loaded from env.")

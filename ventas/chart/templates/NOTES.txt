@@ -1,2 +1,2 @@
 From outside the cluster, the showtimes microservice URL is: http://{{ .Values.ingress.host }}
-Get the list of showtimes: http://{{ .Values.ingress.host }}/showtimes
+Get the list of showtimes: http://{{ .Values.ingress.host }}/ventas
